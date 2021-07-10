@@ -50,3 +50,63 @@ Public method description
 		bool 		Show(string &cells[][]);                    //Render the table
 		
 		void		~Table();                                   //Delete table and remove all objects created by the table.
+
+
+
+
+```
+#property copyright "Copyright 2021, MetaQuotes Software Corp."
+#property link      "https://www.mql5.com"
+#property version   "1.00"
+
+#include <Table.mqh>
+
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+  {
+//---
+
+   string myArray[10][10];
+   
+
+   
+   Table *myTable = new Table(ChartID(), 0, "tableName");
+   myTable.Create(0,0,10,10); //to set each value as you wishes
+
+   myArray[0][0] ="ID";
+   myArray[0][1] ="Name";
+   myArray[1][0] ="1";
+   myArray[1][1] ="test";
+   myArray[2][0] ="2";
+   myArray[2][1] ="test2";
+  
+   myTable.Show(myArray);
+   
+
+
+//---
+   return(INIT_SUCCEEDED);
+  }
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+  {
+//---
+   
+  }
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+  {
+//---
+   
+  }
+//+------------------------------------------------------------------+
+
+
+```
