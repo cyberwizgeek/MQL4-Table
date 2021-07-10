@@ -54,6 +54,7 @@ Public method description
 
 
 
+# Sample Code
 ```
 #property copyright "Copyright 2021, MetaQuotes Software Corp."
 #property link      "https://www.mql5.com"
